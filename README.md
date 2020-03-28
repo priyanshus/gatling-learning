@@ -8,7 +8,7 @@ Contains gatling based performance test scripts.
 
 #### How to run
 ```
-git clone 
+git clone https://github.com/priyanshus/gatling-learning.git
 cd gatling-learning
 export USERS_COUNT=1
 export BASE_URL=https://example.site
@@ -16,7 +16,7 @@ sh run.sh
 
 or
 docker build -t gatling .
-docker run -it -e USERS_COUNT=1 -e BASE_URL=https://example.com
+docker run -it -e USERS_COUNT=1 -e BASE_URL=https://example.com --name gatling-container --rm gatling
 
 or
 mvn clean gatling:test -Dgatling.simulationClass=com.tw.performance.LoginRequestSimulation
